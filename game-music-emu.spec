@@ -1,6 +1,6 @@
 Name:           game-music-emu
 Version:        0.5.5
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Video game music file emulation/playback library
 License:        LGPLv2+
 URL:            http://code.google.com/p/game-music-emu/
@@ -84,6 +84,9 @@ cd ..
 
 
 %changelog
+* Thu Jul 19 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.5.5-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
+
 * Fri Jan 13 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.5.5-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
 
