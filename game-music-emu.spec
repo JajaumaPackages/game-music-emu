@@ -1,6 +1,7 @@
 Name:           game-music-emu
+Provides:       libgme
 Version:        0.6.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Video game music file emulation/playback library
 License:        LGPLv2+
 URL:            http://code.google.com/p/game-music-emu/
@@ -87,6 +88,9 @@ cd ..
 
 
 %changelog
+* Fri Sep 13 2013 Karel Volný <kvolny@redhat.com> 0.6.0-2
+- Add virtual provides libgme (bug #1006881)
+
 * Thu Aug 22 2013 Karel Volný <kvolny@redhat.com> 0.6.0-1
 - New release
 - See changes.txt for list of upstream changes
