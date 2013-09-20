@@ -1,7 +1,7 @@
 Name:           game-music-emu
-Provides:       libgme
 Version:        0.6.0
-Release:        2%{?dist}
+Release:        3%{?dist}
+Provides:       libgme%{?_isa} = %{version}-%{release}
 Summary:        Video game music file emulation/playback library
 License:        LGPLv2+
 URL:            http://code.google.com/p/game-music-emu/
@@ -14,6 +14,7 @@ BuildRequires:  SDL-devel
 
 %package devel
 Summary:        Development files for Game_Music_Emu
+Provides:       libgme-devel%{?_isa} = %{version}-%{release}
 Requires:       %{name}%{?_isa} = %{version}
 Requires:       pkgconfig
 
@@ -88,6 +89,9 @@ cd ..
 
 
 %changelog
+* Fri Sep 20 2013 Karel Volný <kvolny@redhat.com> 0.6.0-3
+- Adjust virtual provides according to further comments on bug#1006881
+
 * Fri Sep 13 2013 Karel Volný <kvolny@redhat.com> 0.6.0-2
 - Add virtual provides libgme (bug #1006881)
 
