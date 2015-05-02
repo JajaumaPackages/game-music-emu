@@ -1,6 +1,6 @@
 Name:           game-music-emu
 Version:        0.6.0
-Release:        5%{?dist}
+Release:        6%{?dist}
 Provides:       libgme%{?_isa} = %{version}-%{release}
 Summary:        Video game music file emulation/playback library
 License:        LGPLv2+
@@ -89,6 +89,9 @@ cd ..
 
 
 %changelog
+* Sat May 02 2015 Kalev Lember <kalevlember@gmail.com> - 0.6.0-6
+- Rebuilt for GCC 5 C++11 ABI change
+
 * Sat Aug 16 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.6.0-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_21_22_Mass_Rebuild
 
