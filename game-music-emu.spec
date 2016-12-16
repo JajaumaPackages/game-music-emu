@@ -1,12 +1,11 @@
 Name:           game-music-emu
-Version:        0.6.0
-Release:        8%{?dist}
+Version:        0.6.1
+Release:        1%{?dist}
 Provides:       libgme%{?_isa} = %{version}-%{release}
 Summary:        Video game music file emulation/playback library
 License:        LGPLv2+
-URL:            http://code.google.com/p/game-music-emu/
-Source0:        http://game-music-emu.googlecode.com/files/%{name}-%{version}.tar.bz2
-Patch0:         gme-0.6.0-pc-lib-suffix.patch
+URL:            https://bitbucket.org/mpyne/game-music-emu/wiki/Home
+Source0:        https://bitbucket.org/mpyne/game-music-emu/downloads/%{name}-%{version}.tar.bz2
 
 BuildRequires:  cmake
 # needed to build the player
@@ -46,8 +45,6 @@ This package contains the demo player for files supported by Game_Music_Emu.
 
 %prep
 %setup -q
-# fix libgme.pc install path
-%patch0
 # add install rule for the player
 echo -e "\ninstall(TARGETS gme_player RUNTIME DESTINATION %{_bindir})" >> player/CMakeLists.txt
 
@@ -89,6 +86,13 @@ cd ..
 
 
 %changelog
+* Thu Dec 15 2016 Karel Volný <kvolny@redhat.com> 0.6.1-1
+- New release 0.6.1
+- Fixes CVE-2016-9959 (security issues in SNES emulation)
+  https://scarybeastsecurity.blogspot.cz/2016/12/redux-compromising-linux-using-snes.html
+- Updated URLs - project moved
+- Dropped gme-0.6.0-pc-lib-suffix.patch (accepted upstream)
+
 * Wed Feb 03 2016 Fedora Release Engineering <releng@fedoraproject.org> - 0.6.0-8
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
 
