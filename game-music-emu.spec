@@ -1,6 +1,6 @@
 Name:           game-music-emu
 Version:        0.6.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Provides:       libgme%{?_isa} = %{version}-%{release}
 Summary:        Video game music file emulation/playback library
 License:        LGPLv2+
@@ -86,6 +86,9 @@ cd ..
 
 
 %changelog
+* Fri Feb 10 2017 Fedora Release Engineering <releng@fedoraproject.org> - 0.6.1-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+
 * Thu Dec 15 2016 Karel Volný <kvolny@redhat.com> 0.6.1-1
 - New release 0.6.1
 - Fixes CVE-2016-9959 (security issues in SNES emulation)
